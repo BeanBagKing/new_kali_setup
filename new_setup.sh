@@ -83,6 +83,7 @@ wget --quiet -P /root/Scripts https://raw.githubusercontent.com/pentestmonkey/un
 	chmod 755 /root/Scripts/unix-privesc-check
 
 git clone https://github.com/13Cubed/Abeebus /root/Scripts/Abeebus &> /dev/null
+git clone https://github.com/BeanBagKing/kali_update /root/Scripts/kali_update &> /dev/null
 git clone https://github.com/ChrisTruncer/EyeWitness /root/Scripts/EyeWitness &> /dev/null
 git clone https://github.com/drwetter/testssl.sh /root/Scripts/testssl &> /dev/null
 git clone https://github.com/EmpireProject/Empire /root/Scripts/Empire &> /dev/null
@@ -104,25 +105,28 @@ echo -e "${YEL}--${NC}Creating application shortcuts"
 # Setup shortcuts for ~stuff~
 echo '#!/bin/bash' > /usr/local/bin/abeebus
 echo 'cd /root/Scripts/Abeebus/ && ./abeebus.py "$@"' >> /usr/local/bin/abeebus
-chmod 755 abeebus
+chmod 755 /usr/local/bin/abeebus
+echo '#!/bin/bash' > /usr/local/bin/update.sh
+echo 'cd /root/Scripts/kali_update/ && ./update.sh "$@"' >> /usr/local/bin/update.sh
+chmod 755 /usr/local/bin/update.sh
 echo '#!/bin/bash' > /usr/local/bin/eyewitness
 echo 'cd /root/Scripts/EyeWitness/ && ./EyeWitness.py "$@"' >> /usr/local/bin/eyewitness
-chmod 755 eyewitness
+chmod 755 /usr/local/bin/eyewitness
 echo '#!/bin/bash' > /usr/local/bin/kali
 echo 'cd /root/Scripts/kali-tools/ && ./kali.py "$@"' >> /usr/local/bin/kali
-chmod 755 kali
+chmod 755 /usr/local/bin/kali
 echo '#!/bin/bash' > /usr/local/bin/pret
 echo 'cd /root/Scripts/PRET/ && ./pret.py "$@"' >> /usr/local/bin/pret
-chmod 755 pret
+chmod 755 /usr/local/bin/pret
 echo '#!/bin/bash' > /usr/local/bin/wpseku
 echo 'cd /root/Scripts/WPSeku/ && ./wpseku.py "$@"' >> /usr/local/bin/wpseku
-chmod 755 wpseku
+chmod 755 /usr/local/bin/wpseku
 echo '#!/bin/bash' > /usr/local/bin/empire
 echo 'cd /root/Scripts/Empire/ && ./empire.py "$@"' >> /usr/local/bin/empire
-chmod 755 empire
+chmod 755 /usr/local/bin/empire
 echo '#!/bin/bash' > /usr/local/bin/testssl
 echo 'cd /root/Scripts/testssl/ && ./testssl.sh "$@"' >> /usr/local/bin/testssl
-chmod 755 testssl
+chmod 755 /usr/local/bin/testssl
 
 echo -e "${RED}--${NC}Building NSESearch Data File"
 /usr/local/bin/scripts_update.sh
