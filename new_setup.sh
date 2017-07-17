@@ -83,6 +83,7 @@ wget --quiet -P /root/Scripts https://raw.githubusercontent.com/pentestmonkey/un
 	chmod 755 /root/Scripts/unix-privesc-check
 
 git clone https://github.com/13Cubed/Abeebus /root/Scripts/Abeebus &> /dev/null
+git clone https://github.com/aboul3la/Sublist3r /root/Scripts/Sublist3r &> /dev/null
 git clone https://github.com/BeanBagKing/kali_update /root/Scripts/kali_update &> /dev/null
 git clone https://github.com/ChrisTruncer/EyeWitness /root/Scripts/EyeWitness &> /dev/null
 git clone https://github.com/drwetter/testssl.sh /root/Scripts/testssl &> /dev/null
@@ -99,6 +100,7 @@ git clone https://github.com/RUB-NDS/PRET /root/Scripts/PRET &> /dev/null
 echo -e "${YEL}--${NC}Running a few setups"
 /root/Scripts/EyeWitness/setup/setup.sh # Go ahead and run the setup
 /root/Scripts/Empire/setup/install.sh # Go ahead and run the setup
+pip install -r /root/Scripts/Sublist3r/requirements.txt
 tar -C /root/scripts -czf /root/Scripts/upc2.tar.gz unix-privesc-check2 # compress for easy moving - extract with tar -zxvf upc2.tar.gz
 
 echo -e "${YEL}--${NC}Creating application shortcuts"
@@ -106,6 +108,9 @@ echo -e "${YEL}--${NC}Creating application shortcuts"
 echo '#!/bin/bash' > /usr/local/bin/abeebus
 echo 'cd /root/Scripts/Abeebus/ && ./abeebus.py "$@"' >> /usr/local/bin/abeebus
 chmod 755 /usr/local/bin/abeebus
+echo '#!/bin/bash' > /usr/local/bin/sublist3r
+echo 'cd /root/Scripts/Sublist3r/ && ./sublist3r.py "$@"' >> /usr/local/bin/sublist3r
+chmod 755 /usr/local/bin/sublist3r
 echo '#!/bin/bash' > /usr/local/bin/update.sh
 echo 'cd /root/Scripts/kali_update/ && ./update.sh "$@"' >> /usr/local/bin/update.sh
 chmod 755 /usr/local/bin/update.sh
