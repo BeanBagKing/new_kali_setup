@@ -101,7 +101,7 @@ echo -e "${YEL}--${NC}Running a few setups"
 /root/Scripts/EyeWitness/setup/setup.sh # Go ahead and run the setup
 /root/Scripts/Empire/setup/install.sh # Go ahead and run the setup
 pip install -r /root/Scripts/Sublist3r/requirements.txt
-tar -C /root/scripts -czf /root/Scripts/upc2.tar.gz unix-privesc-check2 # compress for easy moving - extract with tar -zxvf upc2.tar.gz
+tar -C /root/Scripts -czf /root/Scripts/upc2.tar.gz unix-privesc-check2 # compress for easy moving - extract with tar -zxvf upc2.tar.gz
 
 echo -e "${YEL}--${NC}Creating application shortcuts"
 # Setup shortcuts for ~stuff~
