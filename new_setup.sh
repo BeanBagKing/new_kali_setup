@@ -50,6 +50,7 @@ echo "alias l='ls -CF'" >> .bashrc
 # Changing Default Settings
 echo '[Settings]' > /root/.config/gtk-3.0/settings.ini
 echo 'gtk-application-prefer-dark-theme=1' >> /root/.config/gtk-3.0/settings.ini
+gsettings set org.gnome.desktop.session idle-delay 0 # Settings -> Power -> Blank Screen -> Never
 
 echo -e "${YEL}--${NC}Gathering BBK's Scripts"
 wget --quiet -O /usr/local/bin/decode.sh https://gist.githubusercontent.com/BeanBagKing/019252de635f8748d36e47ee2d57d3b1/raw
