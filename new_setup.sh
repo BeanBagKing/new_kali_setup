@@ -42,7 +42,7 @@ echo "# Python SimpleHTTPServer Shortcut" >> /root/.bashrc
 echo "alias simplehttp='python -m SimpleHTTPServer'" >> /root/.bashrc
 echo "# Open current directory in file explorer" >> /root/.bashrc
 echo "alias opendir='nautilus . 2>/dev/null'" >> /root/.bashrc
-echo "# some more ls aliases" >> .bashrc
+echo "# some more ls aliases" >> /root/.bashrc
 echo "alias ll='ls -l'" >> /root/.bashrc
 echo "alias la='ls -A'" >> /root/.bashrc
 echo "alias l='ls -CF'" >> /root/.bashrc
