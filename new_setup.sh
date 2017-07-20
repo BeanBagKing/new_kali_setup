@@ -31,23 +31,24 @@ pip install pinggraph
 
 echo -e "${YEL}--${NC}Adding command line options"
 # Add syntax to vim
-echo "syntax on" >> .vimrc
+echo "syntax on" >> /root/.vimrc
 
 # Add stuff to .bashrc
-echo -e "\n" >> .bashrc
-echo "# ADDING STUFF FROM SETUP SCRIPT" >> .bashrc
-echo "# colorcat" >> .bashrc
-echo "alias ccat='pygmentize -O bg=dark,style=colorful'" >> .bashrc
-echo "# Python SimpleHTTPServer Shortcut" >> .bashrc
-echo "alias simplehttp='python -m SimpleHTTPServer'" >> .bashrc
-echo "# Open current directory in file explorer" >> .bashrc
-echo "alias opendir='nautilus . 2>/dev/null'" >> .bashrc
+echo -e "\n" >> /root/.bashrc
+echo "# ADDING STUFF FROM SETUP SCRIPT" >> /root/.bashrc
+echo "# colorcat" >> /root/.bashrc
+echo "alias ccat='pygmentize -O bg=dark,style=colorful'" >> /root/.bashrc
+echo "# Python SimpleHTTPServer Shortcut" >> /root/.bashrc
+echo "alias simplehttp='python -m SimpleHTTPServer'" >> /root/.bashrc
+echo "# Open current directory in file explorer" >> /root/.bashrc
+echo "alias opendir='nautilus . 2>/dev/null'" >> /root/.bashrc
 echo "# some more ls aliases" >> .bashrc
-echo "alias ll='ls -l'" >> .bashrc
-echo "alias la='ls -A'" >> .bashrc
-echo "alias l='ls -CF'" >> .bashrc
+echo "alias ll='ls -l'" >> /root/.bashrc
+echo "alias la='ls -A'" >> /root/.bashrc
+echo "alias l='ls -CF'" >> /root/.bashrc
 
 # Changing Default Settings
+mkdir /root/.config/gtk-3.0
 echo '[Settings]' > /root/.config/gtk-3.0/settings.ini
 echo 'gtk-application-prefer-dark-theme=1' >> /root/.config/gtk-3.0/settings.ini
 gsettings set org.gnome.desktop.session idle-delay 0 # Settings -> Power -> Blank Screen -> Never
