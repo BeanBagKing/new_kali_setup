@@ -104,8 +104,12 @@ git clone https://github.com/rebootuser/LinEnum /root/Scripts/LinEnum &> /dev/nu
 git clone https://github.com/RUB-NDS/PRET /root/Scripts/PRET &> /dev/null
 
 echo -e "${YEL}--${NC}Running a few setups"
+cd /root/Scripts/EyeWitness/setup # move into directory to stop it from dropping phantomjs in the current
 /root/Scripts/EyeWitness/setup/setup.sh # Go ahead and run the setup
+cd -
+cd /root/Scripts/Empire/setup/ # move into directory to stop it from dropping bomutils in the current
 /root/Scripts/Empire/setup/install.sh # Go ahead and run the setup
+cd -
 pip install -r /root/Scripts/Sublist3r/requirements.txt
 tar -C /root/Scripts -czf /root/Scripts/upc2.tar.gz unix-privesc-check2 # compress for easy moving - extract with tar -zxvf upc2.tar.gz
 
