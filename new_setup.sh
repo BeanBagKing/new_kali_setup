@@ -1,8 +1,9 @@
 #!/bin/bash
 
-YEL='\033[1;33m'
 RED='\033[1;31m'
 GRN='\033[1;32m'
+YEL='\033[1;33m'
+BLU='\033[1;34m'
 NC='\033[0m' # No Color
 
 # This script assumes you've already taken the necessary initial steps to setup network connectivity and install vmware tools
