@@ -11,7 +11,7 @@ NC='\033[0m' # No Color
 echo -e "${YEL}--${NC}Starting script, installing commonly used programs"
 dpkg --add-architecture i386 # Add support for 32bit stuff (ex. Ollydbg)
 apt update
-apt install open-vm-tools-desktop fuse exfat-utils exfat-fuse python3-bs4 cherrytree libreoffice network-manager-openvpn-gnome network-manager-openconnect-gnome wine32 html2text ntpdate -y
+apt install open-vm-tools-desktop fuse exfat-utils exfat-fuse python3-bs4 libreoffice network-manager-openvpn-gnome network-manager-openconnect-gnome wine32 html2text ntpdate -y
 
 # Other Notes
 # Install FoxyProxy Basic - Setup for Zap/Burp
