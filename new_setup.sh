@@ -67,9 +67,11 @@ wget --quiet -O /usr/local/bin/nsesearch.sh https://gist.githubusercontent.com/B
 	chmod 755 /usr/local/bin/nsesearch.sh
 
 echo -e "${YEL}--${NC}Installing Sublime"
-wget --quiet -O /root/Downloads/sublime.deb https://download.sublimetext.com/sublime-text_build-3126_amd64.deb
-	dpkg -i /root/Downloads/sublime.deb
-	rm /root/Downloads/sublime.deb -f
+wget -qO - https://download.sublimetext.com/sublimehq-pub.gpg | apt-key add -
+apt install apt-transport-https
+echo "deb https://download.sublimetext.com/ apt/stable/" | sudo tee /etc/apt/sources.list.d/sublime-text.list
+apt update
+apt install sublime-text
 
 echo -e "${YEL}--${NC}Prepping Scripts"
 # Make a dir for our scripts.
