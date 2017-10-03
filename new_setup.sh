@@ -92,6 +92,7 @@ wget --quiet -P /root/Scripts https://raw.githubusercontent.com/pentestmonkey/un
 	chmod 755 /root/Scripts/unix-privesc-check
 
 git clone https://github.com/13Cubed/Abeebus /root/Scripts/Abeebus &> /dev/null
+git clone https://github.com/DidierStevens/DidierStevensSuite /root/Scripts/DidierStevensSuite &> /dev/null
 git clone https://github.com/aboul3la/Sublist3r /root/Scripts/Sublist3r &> /dev/null
 git clone https://github.com/BeanBagKing/kali_update /root/Scripts/kali_update &> /dev/null
 git clone https://github.com/ChrisTruncer/EyeWitness /root/Scripts/EyeWitness &> /dev/null
